@@ -1,0 +1,22 @@
+figure (1)
+imagesc(rot90(squeeze(log10(fluence.data(:,60,:)))))
+colorbar
+caxis([10 18]);
+c=colorbar;
+xticks(1);
+xticks([1,20:20:120]);
+yticks([1,20:20:260]);
+xticklabels({'0','10', '20', '30', '40', '50','60'});
+yticklabels({'130','120', '110', '100', '90', '80','70','60', '50', '40', '30', '20','10', '0'});
+xlabel('x (\mum)');
+ylabel('z (\mum)');
+ylabel(c, 'log_1_0(\phi) (\mum^-^2)');
+title('50% Fat - 0.4 \mum - Reflectance (1000 fs)', 'FontSize', 14);
+set(gca, 'FontSize', 14);
+
+
+figure (2)
+imagesc(rot90(squeeze(log10(flu.data(:,60,:)))))
+colorbar
+c=colorbar;
+xticks(1);
